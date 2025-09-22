@@ -12,17 +12,16 @@ using namespace std;
 
 int main()
 {
-	int num = 0;
-	for (int i = 1; i <= 100; i++)
-		num += i;
+	int StarLevel = 5;
 
-	cout << num << endl;
-
-	num = 0;
-	for (int i = 3; i <= 100; i += 3)
-		num += i;
-
-	cout << num << endl;
+	for (int i = StarLevel; i > 0; --i)
+	{
+		for (int j = 0; j < StarLevel - i; ++j)
+			cout << " ";
+		for (int j = 0; j < i; ++j)
+			cout << "*";
+		cout << endl;
+	}
 
 	return 0;
 }
