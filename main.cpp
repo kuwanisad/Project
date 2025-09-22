@@ -18,5 +18,11 @@ int main()
 
 	cout << num << endl;
 
+	num = 0;
+	for (int i = 3; i <= 100; i += 3)
+		num += i;
+
+	cout << num << endl;
+
 	return 0;
 }
