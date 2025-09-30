@@ -7,17 +7,17 @@
 
 using namespace std;
 
-int Solution(int InputCount)
+long long Solution(long long InputCount)
 {
-	int Answer = 0;
+	long long Answer = 0;
 	bool flag = false;
 
 	for (; InputCount > 0; --InputCount)
 	{
-		int Number;
+		long Number;
 		cin >> Number;
 
-		int Temp = 1 << std::bit_width(static_cast<unsigned int>(Number));
+		long Temp = 1 << std::bit_width(static_cast<unsigned long long>(Number));
 
 		if (Temp < Number)
 			Temp <= 1;
