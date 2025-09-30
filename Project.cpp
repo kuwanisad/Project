@@ -20,7 +20,7 @@ long long Solution(long long InputCount)
 		long long Temp = static_cast<long long>(1) << std::bit_width(static_cast<unsigned long long>(Number));
 
 		if (Temp < Number)
-			Temp <= 1;
+			Temp <<= 1;
 
 		if (flag)
 		{
