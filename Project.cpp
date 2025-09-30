@@ -14,10 +14,10 @@ long long Solution(long long InputCount)
 
 	for (; InputCount > 0; --InputCount)
 	{
-		long Number;
+		long long Number;
 		cin >> Number;
 
-		long Temp = 1 << std::bit_width(static_cast<unsigned long long>(Number));
+		long long Temp = static_cast<long long>(1) << std::bit_width(static_cast<unsigned long long>(Number));
 
 		if (Temp < Number)
 			Temp <= 1;
