@@ -38,7 +38,10 @@ long long Solution(long long InputCount)
 
 int main()
 {
-	cout << Solution(3);
+	int InputCount = 0;
+	cin >> InputCount;
+
+	cout << Solution(InputCount);
 
 	return 0;
 }
