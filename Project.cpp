@@ -7,41 +7,57 @@
 
 using namespace std;
 
-long long Solution(long long InputCount)
+class UCharacter
 {
-	long long Answer = 0;
-	bool flag = false;
+public:
+	float HPCurrent;
+	float HPMax;
 
-	for (; InputCount > 0; --InputCount)
+	void Move()
 	{
-		long long Number;
-		cin >> Number;
 
-		long long Temp = static_cast<long long>(1) << std::bit_width(static_cast<unsigned long long>(Number));
+	}
+};
 
-		if (Temp < Number)
-			Temp <<= 1;
+class UPlayer : public UCharacter
+{
+public:
+	int Gold;
 
-		if (flag)
-		{
-			Answer ^= Temp;
-		}
-		else
-		{
-			flag = true;
-			Answer = Temp;
-		}
+	void Attack()
+	{
+
 	}
 
-	return Answer;
-}
+	void PickUpGold()
+	{
+
+	}
+};
+
+class UMonster : public UCharacter
+{
+public:
+	int GoldToDrop;
+	virtual void DropGold()
+	{
+		if (HPCurrent <= 0)
+		{
+			//골드 드롭 코드
+		}
+	}
+};
+
+class UWorld
+{
+	UPlayer Player;
+	UCharacter Slime;
+	UCharacter Boar;
+	UCharacter Goblin;
+};
 
 int main()
 {
-	int InputCount = 0;
-	cin >> InputCount;
-
-	cout << Solution(InputCount);
 
 	return 0;
 }
