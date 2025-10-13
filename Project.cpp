@@ -39,7 +39,13 @@ class UMonster : public UCharacter
 {
 public:
 	int GoldToDrop;
-	virtual void DropGold()
+
+	void Dead()
+	{
+		DropGold();
+	}
+
+	void DropGold()
 	{
 		if (HPCurrent <= 0)
 		{
